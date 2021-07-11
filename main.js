@@ -1,52 +1,52 @@
-// function createCard(title, src) {
-//     const card = document.createElement('div')
-//     card.classList.add('card')
+function createCard(title, src) {
+    const card = document.createElement('div')
+    card.classList.add('card')
 
-//     const cardAvatar = document.createElement('div')
-//     cardAvatar.classList.add('card-avatar')
+    const cardAvatar = document.createElement('div')
+    cardAvatar.classList.add('card-avatar')
 
-//     const img = document.createElement('img')
-//     img.src = src
+    const img = document.createElement('img')
+    img.src = src
 
-//     cardAvatar.append(img)
+    cardAvatar.append(img)
 
-//     const cardTitle = document.createElement('p')
-//     cardTitle.innerText = title;
-//     cardTitle.classList.add('card-title')
+    const cardTitle = document.createElement('p')
+    cardTitle.innerText = title;
+    cardTitle.classList.add('card-title')
 
-//     const cardAction = document.createElement('div')
-//     cardAction.classList.add('card-action')
+    const cardAction = document.createElement('div')
+    cardAction.classList.add('card-action')
 
-//     const button = document.createElement('button')
-//     button.innerText = 'Boshlash';
+    const button = document.createElement('button')
+    button.innerText = 'Boshlash';
 
-//     cardAction.append(button)
+    cardAction.append(button)
 
-//     card.append(cardAvatar)
-//     card.append(cardTitle)
-//     card.append(cardAction)
+    card.append(cardAvatar)
+    card.append(cardTitle)
+    card.append(cardAction)
 
-//     return card;
-// }
+    return card;
+}
 
-// const card1 = createCard('Jismoniy', './avatar.svg'); 
-// const card2 = createCard('yuridik', './avatar.svg'); 
-// const card3 = createCard('maishiy', './avatar.svg'); 
-// const card4 = createCard('oldi sotti', './avatar.svg'); 
+const card1 = createCard('Jismoniy', './avatar.svg'); 
+const card2 = createCard('yuridik', './avatar.svg'); 
+const card3 = createCard('maishiy', './avatar.svg'); 
+const card4 = createCard('oldi sotti', './avatar.svg'); 
 
-// const container = document.getElementsByClassName('container')[0];
-// container.append(card1)
-// container.append(card2)
-// container.append(card3)
-// container.append(card4)
+const container = document.getElementsByClassName('container')[0];
+container.append(card1)
+container.append(card2)
+container.append(card3)
+container.append(card4)
 
 function jsModul() {
 
-    const modcontainer = document.createElement('div')
-    modcontainer.classList.add('modal-container')
+    const modcontainer = document.createElement('div');
+    modcontainer.classList.add('modal-container');
     
-    const modfade = document.createElement('div')
-    modfade.classList.add('modal' , 'fade')
+    const modfade = document.createElement('div');
+    modfade.classList.add('modal' , 'fade');
     modfade.id='js-mod'
     
     const modDialog = document.createElement('div')
@@ -89,7 +89,7 @@ function jsModul() {
     modfade.append(modDialog)
     modcontainer.append(modfade)
 
-    const modSection = document.getElementsByClassName('modal-section')
+    const modSection = document.getElementsByClassName('modal-section')[0]
 
     modSection.append(modcontainer)
 }
