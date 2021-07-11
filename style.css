@@ -1,3 +1,47 @@
 * {
-    background-color: aqua;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 226px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-avatar {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: #1B66F3;
+}
+
+.card-title  {
+    height: 60px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+    overflow: hidden;
+}
+
+.card-action button {
+    width: 100%;
+    height: 63px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    border: none;
+    cursor: pointer;
 }
