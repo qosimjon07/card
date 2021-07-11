@@ -89,10 +89,8 @@ function jsModul() {
     modfade.append(modDialog)
     modcontainer.append(modfade)
 
-    return modcontainer
+    const modSection = document.getElementsByClassName('modal-section')
+
+    modSection.append(modcontainer)
 }
 
-const modul  = jsModul()
-const modalSection = document.getElementsByClassName('modal-section')
-
-modalSection.append(modul)
