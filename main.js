@@ -46,7 +46,7 @@ function jsModul() {
     modcontainer.classList.add('modal-container');
     
     const modfade = document.createElement('div');
-    modfade.classList.add('modal' , 'fade');
+    modfade.classList.add('modal');
     modfade.id='js-mod'
     
     const modDialog = document.createElement('div')
@@ -88,9 +88,9 @@ function jsModul() {
     modDialog.append(modContent)
     modfade.append(modDialog)
     modcontainer.append(modfade)
-
-    const modSection = document.getElementsByClassName('modal-section')[0]
-
-    modSection.append(modcontainer)
 }
 
+const consoleMod = jsModul();
+const modSection = document.getElementsByClassName('modal-section')[0];
+
+modSection.append(consoleMod)
