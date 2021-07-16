@@ -68,7 +68,7 @@ function jsModul() {
 
     const modInput = document.createElement('input')
     modInput.classList.add('mod-input')
-    modInput.type = Text 
+    modInput.type = 'text' 
 
     const modTitle = document.createElement('p')
     modTitle.classList.add('mod-title')
@@ -76,7 +76,7 @@ function jsModul() {
 
     const modInput2 = document.createElement('input')
     modInput2.classList.add('mod-input')
-    modInput2.type = Number
+    modInput2.type = 'number'
 
     const modButton = document.createElement('button')
     modButton.classList.add('mod-button')
