@@ -37,3 +37,40 @@
     margin-top: 50px;
     background-color: blue;
 }
+
+.overlay {
+    width: 100vw;
+    height: 120vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0.45;
+    background-color: #000000;
+
+    display: none;
+    z-index: 1;
+}
+
+.overlay-active {
+    display: block;
+}
+
+.modals {
+    position: absolute;
+    width: 402px;
+    top: -100%;
+    left:  50%;
+    transform: translate(-50% , -50%);
+    background-color: white;
+    transition: 0.37s;
+    z-index: 1;
+
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.modal-active {
+    top: 50%;
+}

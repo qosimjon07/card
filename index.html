@@ -51,13 +51,25 @@
 
     </div>
 
-    <div class="container cards-container">
-        
+    <div class="overlay" id="custom-overlay" onclick="toggleOverlay()"></div>
+    <div class="modals" id="custom-modal">
+        <p class="js-mod-title">Jismoniy shaxslar</p>
+        <div>
+            <p class="num-text-title">Passport raqami</p>
+            <input type="text" class="mod-input">
         </div>
-        
+
+        <div>
+            <p class="mod-title">JSHSHIR</p>
+            <input type="text" class="mod-input">
+        </div>
+
+        <button class="mod-button">Boshlash</button>
     </div>
 
-    <br><br><br><br><hr><br><br><br><br>
+    <div class="container cards-container"></div>
+
+    <br><br><hr><br><br>
 
     <div class="container cards-container">
         <div class="card">
@@ -68,7 +80,7 @@
                 Jismoniy shaxslar uchun
             </p>
             <div class="card-action">
-                <button data-bs-toggle="modal" data-bs-target="#js-mod">Boshlash</button>
+                <button data-bs-toggle="modal" data-bs-target="#jsh-mod">Boshlash</button>
             </div>
         </div>
         <div class="card">
@@ -79,7 +91,7 @@
                 Yuridik shaxslar uchun
             </p>
             <div class="card-action">
-                <button>Boshlash</button>
+                <button data-bs-toggle="modal" data-bs-target="#YSh-mod">Boshlash</button>
             </div>
         </div>
         <div class="card">
@@ -90,7 +102,7 @@
                 Auto uchun
             </p>
             <div class="card-action">
-                <button>Boshlash</button>
+                <button data-bs-toggle="modal" data-bs-target="#Auto-mod">Boshlash</button>
             </div>
         </div>
         <div class="card">
@@ -101,10 +113,12 @@
                 Uy-joy uchun
             </p>
             <div class="card-action">
-                <button>Boshlash</button>
+                <button data-bs-toggle="modal" data-bs-target="#UyJoy-mod">Boshlash</button>
             </div>
         </div>
     </div>
+
+
 
     <script src="main.js"></script>
 </body>

@@ -19,6 +19,7 @@ function createCard(title, src) {
 
     const button = document.createElement('button')
     button.innerText = 'Boshlash';
+    button.onclick = toggleOverlay
 
     cardAction.append(button)
 
@@ -29,25 +30,23 @@ function createCard(title, src) {
     return card;
 }
 
-const card1 = createCard('Jismoniy', './avatar.svg'); 
-const card2 = createCard('yuridik', './avatar.svg'); 
-const card3 = createCard('maishiy', './avatar.svg'); 
+const card1 = createCard('Jismoniy shaxslar uchun', './avatar.svg'); 
+const card2 = createCard('Yuridik shaxslar uchun', './avatar.svg'); 
+const card3 = createCard('maishiy auto texnika', './avatar.svg'); 
 const card4 = createCard('oldi sotti', './avatar.svg'); 
 
 const container = document.getElementsByClassName('container')[0];
+
 container.append(card1)
 container.append(card2)
 container.append(card3)
 container.append(card4)
 
-function jsModul() {
+function jshModul(idMod , title, passport , jshir) {
 
-    const modcontainer = document.createElement('div');
-    modcontainer.classList.add('modal-container');
-    
     const modfade = document.createElement('div');
-    modfade.classList.add('modal');
-    modfade.id='js-mod'
+    modfade.classList.add('modal' , 'fade');
+    modfade.id = idMod
     
     const modDialog = document.createElement('div')
     modDialog.classList.add('modal-dialog')
@@ -60,11 +59,11 @@ function jsModul() {
 
     const jsModTitle = document.createElement('p')
     jsModTitle.classList.add('js-mod-title')
-    jsModTitle.innerText = 'Jismoniy shaxslar uchun'
+    jsModTitle.innerText = title
 
     const numTextTitle = document.createElement('p')
     numTextTitle.classList.add('num-text-title')
-    numTextTitle.innerText = 'Passport seriya raqami'
+    numTextTitle.innerText = passport
 
     const modInput = document.createElement('input')
     modInput.classList.add('mod-input')
@@ -72,7 +71,7 @@ function jsModul() {
 
     const modTitle = document.createElement('p')
     modTitle.classList.add('mod-title')
-    modTitle.innerText = 'JSHIR'
+    modTitle.innerText = jshir
 
     const modInput2 = document.createElement('input')
     modInput2.classList.add('mod-input')
@@ -87,10 +86,69 @@ function jsModul() {
     modContent.append(containerMod)
     modDialog.append(modContent)
     modfade.append(modDialog)
-    modcontainer.append(modfade)
+
+    return modfade
 }
 
-const consoleMod = jsModul();
+function yshModul(idMod , title , jshir) {
+
+    const modfade = document.createElement('div');
+    modfade.classList.add('modal' , 'fade');
+    modfade.id = idMod;
+    
+    const modDialog = document.createElement('div')
+    modDialog.classList.add('modal-dialog')
+
+    const modContent = document.createElement('div')
+    modContent.classList.add('modal-content')
+
+    const containerMod = document.createElement('div')
+    containerMod.classList.add('container-mod')
+
+    const jsModTitle = document.createElement('p')
+    jsModTitle.classList.add('js-mod-title')
+    jsModTitle.innerText = title
+
+    const modTitle = document.createElement('p')
+    modTitle.classList.add('mod-title')
+    modTitle.innerText = jshir;
+
+    const modInput2 = document.createElement('input')
+    modInput2.classList.add('mod-input')
+    modInput2.type = 'text'
+
+    const modButton = document.createElement('button')
+    modButton.classList.add('mod-button')
+    modButton.innerText = 'Yuklash'
+
+    containerMod.append(jsModTitle , modTitle , modInput2 , modButton)
+    modContent.append(containerMod)
+    modDialog.append(modContent)
+    modfade.append(modDialog)
+
+    return modfade
+}
+
 const modSection = document.getElementsByClassName('modal-section')[0];
 
-modSection.append(consoleMod)
+
+const JShMod = jshModul('jsh-mod' , 'Jismoniy shaxslar uchun' , 'Passport seriya raqami' , 'JSHIR');
+const YShMod = yshModul('YSh-mod' , 'Yuridik shaxslar uchun' , 'STIR');
+const AutoMod =jshModul('Auto-mod' , 'Automobillar uchun' , 'TEX passport raqami' , 'STIR')
+const UyJoyMod = yshModul('UyJoy-mod' , 'Uy-joy uchun' , 'Kadastr raqami');
+
+modSection.append(JShMod , YShMod , AutoMod , UyJoyMod) 
+
+
+function toggleModal() {
+    const customModal = document.getElementById('custom-modal')
+
+    customModal.classList.toggle('modal-active')
+}
+
+function toggleOverlay() {
+    const overlay = document.getElementById('custom-overlay')
+
+    overlay.classList.toggle('overlay-active')
+    toggleModal()
+}
